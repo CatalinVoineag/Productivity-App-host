@@ -5,8 +5,8 @@ app.controller('HomeController', function($scope) {
 
 	$scope.slides = [
 		{image: '../../images/contacts.jpg', description: 'Image 00'},
-		{image: '../..images/bookmark.jpg', description: 'Image 00'},
-		{image: '../..images/todo.jpg', description: 'Image 00'}
+		{image: '../../images/bookmark.jpg', description: 'Image 00'},
+		{image: '../../images/todo.jpg', description: 'Image 00'}
 	];
 
 	$scope.currentIndex = 0;
