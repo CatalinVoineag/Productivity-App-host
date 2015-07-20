@@ -1,0 +1,127 @@
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 330px) {
+
+  .footer {
+    width:110%;
+  }
+
+  .nav {
+    width: 110%;
+  }
+
+  .github-footer {
+    margin-left: 40%; 
+ }
+
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .slider{ height: 250px; width: 90%;}
+
+  .arrow { top: 50%; }
+
+  .arrow.prev { left: 1%;}
+  .arrow.next {right: 1%;}
+
+   .side-bar {
+    margin-left: 15%;
+    
+  }
+
+  .add-form {
+    position: absolute;
+  }
+
+  .main-layout {
+    
+     margin-left: 15%;
+  }
+  .contacts-table { margin-left:-12%;}
+
+   .github-footer {
+    margin-left: 40%; 
+ }
+
+  
+
+}
+
+
+}
+
+
+@media screen and (max-width: 660px) {
+
+  .slider { height: 600px; width: 90%;}
+
+  .arrow { top: 20%; }
+
+  .arrow.prev { left: 1%;}
+  .arrow.next {right: 1%;}
+
+
+}
+
+@media screen and (min-width: 661px) {
+
+  .slider {
+    height: 600px; width: 100%; 
+  }
+
+  .arrow { top: 30%; }
+
+  .arrow.prev { left: 1%;}
+  .arrow.next {right: 1%;}
+
+}
+
+@media screen and (min-width: 960px) {
+
+  .slider { height: 600px; width: 100%; }
+
+  .arrow { top: 30%; }
+
+  .arrow.prev { left: 1%;}
+  .arrow.next {right: 1%;}
+}
+
+@media screen and (min-width: 1081px) {
+
+  .slider { height: 600px; width: 100%; }
+
+  .arrow { top: 55%; }
+
+  .arrow.prev { left: 1%;}
+  .arrow.next {right: 1%;}
+
+
+}
+
+@media screen and (min-width: 1280px) {
+
+  .slider { height: 600px; width: 100%; }
+
+  .arrow { top: 40%; }
+
+  .arrow.prev { left: 1%;}
+  .arrow.next {right: 1%;}
+
+}
+
+
+
+@media screen and (min-width: 1920px) {
+
+  .slider { height: 800px; width: 100%; }
+
+  .arrow { top: 60%; }
+
+  .arrow.prev { left: 1%;}
+  .arrow.next {right: 1%;}
+
+}

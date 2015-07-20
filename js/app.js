@@ -1,9 +1,17 @@
 // app.js
 
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'firebase', 'appControllers'])
+var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'firebase'])
 	.constant('FIREBASE_URL', 'https://productivity-app.firebaseio.com/');
 
-	var appControllers = angular.module('appControllers', ['firebase']);
+	app.run(['$rootScope', '$location', function($rootScope, $location) {
+  $rootScope.$on('$routeChangeError',
+  function(event, next, previous, error) {
+    if(error === 'AUTH_REQUIRED') {
+      $rootScope.message='Sorry, you must log in to access that page';
+      $location.path('/login');
+    }
+  });
+}]);
 
   
 

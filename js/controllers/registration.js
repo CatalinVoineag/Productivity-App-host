@@ -20,7 +20,7 @@ app.controller('RegistrationController', function($scope, $location, $firebaseAu
       $scope.register = function() {
     Authentication.register($scope.user)
       .then(function(user) {
-        Authentication.login($scope.user);
+        
         $location.path('/contacts');
       }).catch(function(error) {
         $scope.message = error.message;
