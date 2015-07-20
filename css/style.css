@@ -401,6 +401,24 @@ font-weight: bold;
   opacity: 1
 }
 
+@media screen and (max-width: 330px) {
+
+  .footer {
+    width:110%;
+  }
+
+  .nav {
+    width: 110%;
+  }
+
+  .github-footer {
+    margin-left: 40%; 
+ }
+
+
+
+}
+
 
 @media screen and (max-width: 480px) {
 
@@ -424,8 +442,16 @@ font-weight: bold;
     
      margin-left: 15%;
   }
+  .contacts-table { margin-left:-12%;}
+
+   .github-footer {
+    margin-left: 40%; 
+ }
+
+  
 
 }
+
 
 }
 
