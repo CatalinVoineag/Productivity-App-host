@@ -4,8 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
     
     <!-- JS -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -39,7 +41,7 @@
 
   	
 	    <!-- Side bar -->
-        <div  >
+        <div class="row" >
 	    <div ng-include="'views/side-bar.html'"></div>
 
 	  	<!-- each angular controller applies a different class here -->
@@ -51,7 +53,7 @@
 
 	</div>
 <!-- Footer --> 
-    <div ng-include="'views/footer.html'" ng-if="$location.path() !== '/'"></div>
+    <div ng-include="'views/footer.html'" ng-if="location.path() !== '/'"></div>
    
 
 	

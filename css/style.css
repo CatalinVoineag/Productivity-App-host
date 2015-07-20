@@ -7,7 +7,7 @@ html,body {
 }
 
 .add-form {
-  position:absolute;
+ 
 }
 
 .main-layout {
@@ -15,7 +15,7 @@ html,body {
 }
 
 .add-form {
-  
+  position: absolute;
   
 
 }
@@ -172,9 +172,13 @@ font-weight: bold;
   padding-right: 1px;
 }
 
-.table {
+.contacts-table {
+  
   margin-top: 220px;
+  height:100%;
 }
+
+
 
  input {
   padding-top:10px;
