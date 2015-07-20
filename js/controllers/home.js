@@ -4,7 +4,7 @@ app.controller('HomeController', function($scope) {
 	$scope.pageClass = "page-home";
 
 	$scope.slides = [
-		{image: 'http://dwarfi.github.io/images/contacts.jpg', description: 'Image 00'},
+		{image: 'https://github.com/dwarfi/Productivity-App-host/blob/master/images/contacts.jpg', description: 'Image 00'},
 		{image: '../images/bookmark.jpg', description: 'Image 00'},
 		{image: '../images/todo.jpg', description: 'Image 00'}
 	];
