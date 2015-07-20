@@ -1,0 +1,43 @@
+<!-- Contacts Page -->
+
+<div class="main-layout col-sm-8" >
+	<div class="row">
+
+			<h1 class="title1 col-sm-offset-6">Contacts <button class="btn-sm btn btn-primary" ng-click="toggle()"><span class='plus glyphicon glyphicon-plus'></span></button></h1>
+
+			<form class="add-form form-signin col-sm-5 col-sm-offset-5" ng-hide="visible" 
+			  name="myform" ng-submit="addContact()" novalidate>
+
+				<input type="text" name="contactname" class="form-control" placeholder="Contact Name" ng-model="contactname" ng-required="true">
+
+				<input class="form-control" name="contactphone" placeholder="Contact Phone Number" ng-model="contactphone" ng-required="true">
+
+				<input type="email" name="contactemail" class="form-control" placeholder="Contact Email" ng-model="contactemail" ng-required="true"> 
+
+				<br><button class="contact-btn btn btn-primary col-md-offset-4" type="submit"
+				 ng-disabled="myform.$invalid">Add Contact</button>
+
+			</form>
+
+		<div class="col-sm-9 col-sm-offset-4">
+
+		<table class="data-list table table-striped">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Phone</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="(key, contact) in contacts">
+					<td>{{contact.name}}</td>
+					<td>{{contact.phone}}</td>
+					<td>{{contact.email}}</td>
+					<td><button class="btn btn-danger btn-sm" ng-click="deleteContact(key)">X</button>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</div>

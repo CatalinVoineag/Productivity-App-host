@@ -1,0 +1,35 @@
+<!-- Bookmarks Page -->
+<div class="main-layout col-sm-8">
+		<div class="row">
+
+			<div class="title1">
+				<h1 class="col-sm-offset-6">Bookmarks <button class="btn-sm btn btn-primary" ng-click="toggle()"><span class='plus glyphicon glyphicon-plus'></span></button></h1>
+
+				<form class="add-form form-signin col-sm-5 col-sm-offset-5" ng-hide="visible" action="" 
+				 name="myform" ng-submit="addBookmark()" novalidate>
+
+						<input type="text" name="bookmarkname" class="form-control" placeholder="Bookmark Name"
+						 ng-model="bookmarkname" ng-required="true">
+
+						<input class="form-control" placeholder="URL" name="bookmarkurl"
+						 ng-model="bookmarkurl" ng-required="true">
+
+						<br><button class="contact-btn btn btn-primary col-sm-offset-3" type="submit"
+						 ng-disabled="myform.$invalid">Add Bookmark</button>
+
+					</form>
+				</div>
+
+
+			<div class="bookmarks-content col-sm-offset-4">
+				<ul class="bookmarks-list list-group" >
+					<li class="add-li list-group-item list-group-item-info" ng-repeat="(key, bookmark) in bookmarks">
+						<a href="{{bookmark.url}}">{{bookmark.name}}</a>
+						<button class="delete-bookmark btn btn-danger btn-sm pull-right" ng-click="deleteBookmark(key)">X</button>
+					</li>
+				<ul>
+			</div>
+			
+		</div>
+
+</div>

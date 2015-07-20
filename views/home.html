@@ -1,0 +1,18 @@
+<!-- home.html -->
+
+<div class="container col-sm-6 col-sm-offset-3">
+		<div class="slider">
+			<img ng-repeat="slide in slides" class="slide slide-animation img-responsive"
+			 ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+
+			 <a class="arrow prev"  ng-click="nextSlide()"></a>
+			 <a class="arrow next"  ng-click="prevSlide()"></a>
+
+		
+		</div>
+		<div class="app-description col-xs-12">
+			<h1><a ng-href="#login">Login</a> or <a ng-href="#/register">Register</a> to access the website features</h1>
+		</div>
+
+	</div>
+

@@ -1,0 +1,46 @@
+<!-- Todo List Page -->
+
+<div class="main-layout col-sm-8">
+	<div class="row">
+
+		<h1 class="col-sm-offset-6">Todo List <button class="btn-sm btn btn-primary" ng-click="toggle()"><span class='plus glyphicon glyphicon-plus'></span></button></h1>
+
+		<form class="add-form form-signin col-sm-5 col-sm-offset-5" ng-hide="visible"
+		 action="" name="myform" ng-submit="addTodo()" novalidate>
+
+				<input type="text" class="form-control" placeholder="Enter task" name="todoname"
+				 ng-model="todoname" ng-required="true">
+
+				<br><button class="btn btn-primary col-md-offset-4" type="submit" 
+				 ng-disabled="myform.$invalid">Add Task</button>
+
+		</form>
+
+
+			<div class="todo-list col-sm-offset-4">
+
+				<div class="check-all">
+					<button type="submit" ng-click="checkAll()" class="btn btn-success" aria-label="Left Align">
+						Check All<span class="glyphicon glyphicon-ok" aria-hidden="true"> </span>
+					</button>
+				</div>
+
+				<ul class="list-group">
+					<li class="list-group-item" ng-repeat="(key, todo) in todos">
+						<input type="checkbox" ng-model="todo.completed">
+						
+						<label ng-if="todo.completed" ng-style="{'text-decoration': 'line-through'}">{{todo.name}}</label>
+
+						<label ng-if="!todo.completed" ng-style="{'text-decoration': 'none'}">{{todo.name}}</label>
+
+						<button class="todo-btn btn btn-danger btn-sm pull-right" ng-click="deleteTodo(key)">x</button>
+					</li>
+				</ul>
+
+				<button class="todo-completed btn btn-danger pull-right" ng-click="clearCompletedTodos()">
+					Clear completed todos</button>
+
+			</div>
+		</div>
+
+</div>

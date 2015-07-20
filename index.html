@@ -1,0 +1,60 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <!-- CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- JS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="js/lib/angular/angular-route.min.js"></script>
+    <script src="js/lib/angular/angular-animate.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+
+
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/services/authentication.js"></script>
+    <script src="js/services/count.js"></script>
+    <script src="js/controllers/contacts.js"></script>
+    <script src="js/controllers/home.js"></script>
+    <script src="js/controllers/registration.js"></script>
+    <script src="js/controllers/todo.js"></script>
+    <script src="js/controllers/status.js"></script>
+    <script src="js/controllers/bookmarks.js"></script>
+
+</head>
+<body >
+
+  <div id="wrap">
+  	<div id="main">
+		<!-- Navigation -->
+		<div class="header" ng-include="'views/nav.html'" ng-if="location.path() !== '/'"></div>
+
+  	
+	    <!-- Side bar -->
+        <div  >
+	    <div ng-include="'views/side-bar.html'"></div>
+
+	  	<!-- each angular controller applies a different class here -->
+	  	<div class=" page {{pageClass}}" ng-view></div>
+      </div>
+  	</div>
+
+  
+
+	</div>
+<!-- Footer --> 
+    <div ng-include="'views/footer.html'" ng-if="$location.path() !== '/'"></div>
+   
+
+	
+
+</body>
+</html>
