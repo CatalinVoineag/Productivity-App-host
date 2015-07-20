@@ -401,3 +401,6 @@ font-weight: bold;
   opacity: 1
 }
 
+@-ms-viewport{
+  width: device-width;
+}
