@@ -53,10 +53,9 @@
 
  }
 
-
-
- 
-  
+ .navbar-nav{
+ 	display:none;
+ }
 
 }
 
