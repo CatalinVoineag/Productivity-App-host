@@ -1,13 +1,13 @@
  <!-- SIDE BAR -->
 
-<div id="side" class="side-bar col-sm-3 " ng-controller="StatusController" ng-show="currentUser">
+<div class="side-bar col-sm-3" ng-controller="StatusController" ng-show="currentUser">
 
   <ul class="side-list list-group">
     <li class="list-group-item">  
-     <h3>Hi Catalin </h3>
+     <h3>Hi {{user.firstname}} </h3>
     </li>
     <li class="list-group-item">
-      
+      <span class="badge">{{ howManyContacts }}</span>
       <a ng-href="#contacts">Contacts</a>
     </li>
     <li class="list-group-item">
@@ -15,7 +15,7 @@
       <a ng-href="#bookmarks">Bookmarks</a>
     </li>
     <li class="list-group-item">
-      <span class="badge">{{ remainingCount }}</span>
+      <span class="badge">{{ howManyTodos }}</span>
       <a ng-href="#todo">Todo List</a>
     </li>
     <li class="list-group-item">

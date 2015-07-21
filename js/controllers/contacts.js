@@ -1,6 +1,6 @@
 // ContactsController
 app.controller('ContactsController', function($scope, $firebaseAuth, $rootScope, $firebaseArray,
-  Authentication, FIREBASE_URL) {
+  Authentication, FIREBASE_URL, Count) {
 
 	var ref = new Firebase(FIREBASE_URL);
 	var auth = $firebaseAuth(ref);

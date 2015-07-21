@@ -234,7 +234,7 @@ font-weight: bold;
   width: 100%;
   position:absolute;
   background: linear-gradient(#0C1F2E 35%, #5B7B8A 100%);
-
+  overflow: hidden;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -334,6 +334,7 @@ font-weight: bold;
 .app-description h1{
   color:white;
   width:100%;
+  font-size: 2em;
 }
 
 .app-description a {
