@@ -1,10 +1,18 @@
 /* RESPONSIVE DESIGN */
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 360px) {
 
 	.footer {
 		display:none;
 	}
+
+	.contacts-table {
+		margin-left: 0;
+		width:50%;
+		font-size: 0.75em;
+	}
+
+	
 
 }
 
@@ -19,7 +27,7 @@
   .arrow.next {right: 1%;}
 
    .side-bar {
-    margin-left: 15%;
+    margin-left: 10%;
     
   }
 
@@ -31,7 +39,10 @@
     
      margin-left: 15%;
   }
-  .contacts-table { margin-left:-12%;}
+  .contacts-table{
+  	margin-left: -20%;
+  }
+ 
 
    .github-footer {
     margin-left: 40%; 
@@ -41,6 +52,10 @@
   font-size: 1.3em;
 
  }
+
+
+
+ 
   
 
 }
