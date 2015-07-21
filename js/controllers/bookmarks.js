@@ -1,6 +1,6 @@
 /* Bookmarks Controller */
 
-app.controller('BookmarksController', function($scope, $firebase, $firebaseArray, $rootScope, FIREBASE_URL, $firebaseAuth){
+app.controller('BookmarksController', function($scope, $firebase, $firebaseArray, $rootScope, FIREBASE_URL, $firebaseAuth, Count){
 
 	var ref = new Firebase(FIREBASE_URL);
    var auth = $firebaseAuth(ref);

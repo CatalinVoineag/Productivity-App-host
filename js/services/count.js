@@ -32,19 +32,7 @@ app.factory('Count', function($firebaseArray,
 
   });
 
-   $rootScope.currentUser.$watch(function() {
-    var ref = new Firebase(FIREBASE_URL + '/users/' + $rootScope.currentUser.$id + '/todo');
-    var todosArray = $firebaseArray(ref);
-
-    todosArray.$loaded(function(data){
-      $rootScope.howManyTodos = todosArray.length;
-    });
-
-    todosArray.$watch(function(data){
-      $rootScope.howManyTodos = todosArray.length;
-    });
-    
-  });
+   
 
   return true;
 

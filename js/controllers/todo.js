@@ -1,5 +1,5 @@
 // TODO CONTROLLER
-app.controller('TodoController', function($scope, $firebase, $rootScope, $firebaseAuth, $firebaseArray, FIREBASE_URL) {
+app.controller('TodoController', function($scope, $firebase, $rootScope, $firebaseAuth, $firebaseArray, FIREBASE_URL, Count) {
 
 	var ref = new Firebase(FIREBASE_URL);
 	var auth = $firebaseAuth(ref);

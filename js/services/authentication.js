@@ -9,19 +9,11 @@ app.factory('Authentication', function( $firebaseAuth, $firebaseArray, $firebase
 	auth.$onAuth(function(authUser){
 		if (authUser) {
 			var ref = new Firebase(FIREBASE_URL + '/users/' + authUser.uid);
-			var contactsRef = new Firebase(FIREBASE_URL + '/users' + authUser.uid + '/contacts');
 			var user = $firebaseObject(ref);
-			var contactsArray = $firebaseArray(contactsRef);
+			
 			$rootScope.currentUser = user;
 
-			contactsArray.$loaded(function(data) {
-        $rootScope.howManyContacts = contactsArray.length;
-      });
-
-      contactsArray.$watch(function(data) {
-        $rootScope.howManyContacts = contactsArray.length;
-      });
-
+		
 		} else {
 			$rootScope.currentUser = '';
 		}

@@ -1,7 +1,8 @@
 // HOME PAGE CONTROLLER
-app.controller('HomeController', function($scope) {
+app.controller('HomeController', function($scope, $location) {
     
 	$scope.pageClass = "page-home";
+	$scope.currentPath = $location.path();
 
 	$scope.slides = [
 		{image: 'images/contacts.jpg', description: 'Image 00'},

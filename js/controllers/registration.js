@@ -17,6 +17,11 @@ app.controller('RegistrationController', function($scope, $location, $firebaseAu
     	});
     }; //login
 
+    $scope.logout = function() {
+    Authentication.logout();
+    $location.path('#/');
+  } //logout
+
       $scope.register = function() {
     Authentication.register($scope.user)
       .then(function(user) {

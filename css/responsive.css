@@ -37,9 +37,9 @@
   }
   .contacts-table { margin-left:-12%;}
 
-   .github-footer {
-    margin-left: 40%; 
- }
+  .footer {
+    display:none;
+  }
 
  .app-description h1{
   font-size: 1.3em;
